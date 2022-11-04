@@ -1,0 +1,26 @@
+.search-bar {
+  grid-area: search;
+  width: 480px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.search {
+  padding: 1.5rem;
+  width: 450px;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+}
+
+.button-search {
+  background-color: var(--blue);
+  outline: 0;
+  color: white;
+  border: 0;
+  padding: 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+}

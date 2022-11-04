@@ -1,0 +1,240 @@
+/* latest */
+
+.latest {
+  background-color: #fff;
+  width: 900px;
+  margin: auto;
+  padding: 4rem 0 10rem 0;
+  /* background: url("/img/undraw_terms_re_6ak4.svg") no-repeat right; */
+  /* height: 584px; */
+  border-radius: 7px;
+  transition: all 500ms;
+}
+
+.latest h2 {
+  margin-bottom: 6rem;
+  font-family: 'Crimson Pro', serif;
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 1rem;
+  width: max-content;
+}
+
+.trope-name a,
+.trope-name {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  color: #222;
+  text-decoration: none;
+}
+
+.trope-description {
+  background-color: #f1f1f1;
+  padding: 2.5rem;
+  font-size: 16px;
+  margin: 6rem 0;
+  border-radius: 6px;
+  font-style: italic;
+}
+
+.random-container {
+  width: 800px;
+}
+
+.latest-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  flex-wrap: wrap;
+}
+
+.random-book {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 'img block';
+  /* display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; */
+  gap: 2rem;
+}
+
+.latest-book {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.random-block {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 215px;
+  grid-area: block;
+}
+
+.random-block .book-title {
+  width: 100%;
+}
+
+.one-trope-block .random-block .book-title {
+  width: 150px;
+}
+
+.latest-block {
+  width: 205px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 240px;
+}
+
+.latest-img {
+  height: 220px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 25%);
+  grid-area: img;
+}
+
+.book-title a,
+.book-title {
+  color: #222;
+  font-size: 21px;
+  line-height: 1.4;
+  font-family: 'Lora', serif;
+  font-weight: 300;
+  margin-bottom: 0.2rem;
+  margin-top: -0;
+  text-decoration: none;
+}
+
+.book-block .book-title {
+  width: 100%;
+}
+
+.book-title {
+  width: 185px;
+}
+.author-name {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--blue);
+  transition: 0.3s all ease-in-out;
+}
+
+.author-name:hover {
+  border-bottom: 1px solid #30bcd5;
+}
+
+.author-name a {
+  color: #222;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  text-decoration: none;
+}
+
+.desc {
+  width: 600px;
+  font-size: 15px;
+  max-height: 99px;
+  padding-right: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-desc {
+  padding-right: 0.5rem;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.more {
+  text-decoration: none;
+  font-family: 'Crimson Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--blue);
+  transition: 0.3s all ease-in-out;
+}
+
+.more:hover {
+  color: #30bcd5;
+}
+
+@media only screen and (max-width: 450px) {
+  .latest {
+    width: 350px;
+    margin: auto;
+    padding: 4rem 0 5rem 0;
+  }
+  .latest h2 {
+    width: max-content;
+    margin: 2rem auto 6rem auto;
+    font-size: 35px;
+  }
+  .wrapper {
+    width: 100%;
+  }
+
+  .random-container {
+    width: 100%;
+  }
+
+  .random-block {
+    width: 100%;
+    height: 195px;
+  }
+
+  .random-block .book-title {
+    width: 100%;
+  }
+
+  .book-title a {
+    font-size: 17px;
+    width: 80px;
+  }
+  .author-name a {
+    font-size: 13px;
+  }
+
+  .desc {
+    width: 175px;
+    padding-right: 2.5rem;
+  }
+
+  .desc-tag {
+    width: 100%;
+    font-size: 15px;
+    max-height: 98px;
+  }
+
+  .author-block {
+    line-height: 3rem;
+    width: 130px;
+  }
+
+  .trope-description {
+    width: 300px;
+    margin: 5rem auto;
+    font-size: 15px;
+  }
+
+  .trope-name a {
+    font-size: 18px;
+  }
+
+  .latest-img {
+    height: 180px;
+  }
+    .random-book {
+    display: flex;
+    width: 300px;
+    margin: auto;
+  }
+    .desc {
+    width: 175px;
+    padding-right: 2.5rem;
+  }
+}
