@@ -1,0 +1,186 @@
+.book-background {
+  width: 100%;
+  padding-top: 20rem;
+}
+
+.book-separator {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 750px;
+  gap: 10rem;
+  margin: 0 auto;
+}
+
+.section-title {
+  width: max-content;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  height: max-content;
+  margin: auto;
+  align-items: center;
+  grid-template-areas:
+    'title'
+    'author'
+    'button';
+}
+
+.book-title-big {
+  color: #222;
+  font-size: 55px;
+  line-height: 1.4;
+  font-family: 'Lora', serif;
+  font-weight: 300;
+  margin-bottom: 0.2rem;
+  margin-top: -0;
+  text-decoration: none;
+  grid-area: title;
+}
+
+.book-details {
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 450px;
+  margin: 0 auto;
+  margin-top: 12rem;
+  padding-bottom: 5rem;
+  background-color: white;
+}
+
+.book-img {
+  height: 320px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 40%);
+  grid-area: img;
+  margin: auto;
+}
+
+.thumbnail-slow {
+  transition: all ease-in-out 0.5s;
+  z-index: 3;
+}
+
+.thumbnail-slow:hover {
+  transform: scale(1.1);
+}
+
+.section-title .author-name-block {
+  font-size: 15px;
+  grid-area: author;
+}
+
+.section-title .author-name-block a {
+  font-size: 18px;
+}
+
+.author-name-block {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.author-name {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--blue);
+  transition: 0.3s all ease-in-out;
+}
+
+.author-name:hover {
+  border-bottom: 1px solid #30bcd5;
+}
+
+.author-name a {
+  color: #222;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  text-decoration: none;
+}
+
+.one-book .author-name {
+  width: max-content;
+}
+
+.book-btn-row {
+  grid-area: button;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.book-details-section {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  max-height: 400px;
+  padding: 5rem 1rem;
+}
+
+/* dropdown button */
+
+.book-btn-row {
+  grid-area: button;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+
+/* wishlist button */
+
+.wishlist {
+  background-color: white;
+  color: #222;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-family: 'crimson pro', serif;
+  font-weight: 700;
+  transition: all ease-in-out 0.5s;
+}
+.wishlist a {
+  text-decoration: none;
+  color: #222;
+  font-family: 'crimson pro', serif;
+  font-weight: 700;
+  font-size: 18px;
+  transition: all ease-in-out 0.5s;
+}
+
+.wishlist:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #e3242b;
+}
+
+.wishlist a:hover {
+  color: #e3242b;
+}
+
+.book-img {
+  height: 300px;
+}
+
+@media only screen and (max-width: 450px) {
+  .author-name a {
+    font-size: 13px;
+  }
+
+  .book-title-big {
+    font-size: 40px;
+  }
+
+  .book-separator-mobile {
+    flex-direction: column;
+    gap: 8rem;
+  }
+
+  
+  .section-title {
+    width: 320px;
+    margin: auto;
+  }
+}

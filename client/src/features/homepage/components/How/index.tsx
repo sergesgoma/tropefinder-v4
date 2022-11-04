@@ -1,8 +1,8 @@
 import React from 'react';
 import useHowDiv from '../../hooks/useHowDiv';
-import './How.css';
+import '../../styles/How.css';
 
-export const How = () => {
+const How = () => {
   const howDiv = useHowDiv();
 
   return (
@@ -41,3 +41,5 @@ export const How = () => {
     </section>
   );
 };
+
+export default How;

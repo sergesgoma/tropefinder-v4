@@ -1,0 +1,28 @@
+table {
+  margin-top: 1.5rem;
+  width: max-content;
+  font-size: 16px;
+  line-height: 2.2;
+}
+
+.bold {
+  padding-right: 2.5rem;
+}
+
+tr a {
+  text-decoration: none;
+}
+
+td a {
+  color: var(--blue);
+}
+
+.book-genre {
+  width: 500px;
+}
+
+.book-genre a {
+  color: #222;
+  border-bottom: 1px solid var(--blue);
+  margin-right: 0.5rem;
+}

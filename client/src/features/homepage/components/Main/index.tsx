@@ -1,9 +1,8 @@
 import React from 'react';
-import './Main/MultiSelect';
-import './Main.css';
-import { MultiSelect } from './MultiSelect';
+import MultiSelect from './MultiSelect';
+import '../../styles/Main.css';
 
-export const Main = () => {
+const Main = () => {
   return (
     <>
       <main>
@@ -22,7 +21,6 @@ export const Main = () => {
               </div>
 
               <MultiSelect />
-              
             </div>
           </div>
         </form>
@@ -31,3 +29,5 @@ export const Main = () => {
     </>
   );
 };
+
+export default Main;

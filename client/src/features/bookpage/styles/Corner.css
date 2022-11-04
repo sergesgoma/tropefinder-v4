@@ -1,0 +1,38 @@
+.corner {
+  width: 20%;
+}
+
+.corner-tag a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+  line-height: 15px;
+  border-bottom: 1px solid var(--blue);
+  font-family: 'Rubik', sans-serif;
+  transition: all ease-in-out 0.3s;
+  margin: 0.6rem 1rem 0.6rem 0;
+
+}
+
+.corner-tag a:hover {
+  border-bottom: 1px solid #30bcd5;
+}
+
+.corner-tag-link {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.corner h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.corner-tag {
+  padding-bottom: 0.5rem;
+  overflow: auto;
+  height: 350px;
+  padding-right: 1rem;
+}

@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 63%;
+  /* height: 400px; */
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+.bloc-tabs {
+  display: flex;
+}
+.tabs {
+  outline: none;
+  background: transparent;
+  margin-right: 20px;
+  position: relative;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  top: 0;
+  font-weight: 600;
+  cursor: pointer;
+  color: #222;
+  transition: 0.3s ease-in-out all;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid transparent;
+}
+.active-tabs {
+  border-bottom: 2px solid var(--blue);
+  color: #1d1d1d;
+  z-index: 2;
+}
+
+button {
+  border: none;
+}
+.content-tabs {
+  flex-grow: 1;
+}
+.content {
+  background: white;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+
+.content p {
+  width: 100%;
+  height: 100%;
+}
+.active-content {
+  display: block;
+}

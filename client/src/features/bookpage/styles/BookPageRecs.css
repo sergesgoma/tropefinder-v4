@@ -1,0 +1,103 @@
+
+/* Caroussel */
+
+.recs h3 {
+  padding: 2rem 0;
+}
+
+.recs-title {
+  font-size: 17px;
+  text-transform: uppercase;
+  font-family: "Rubik", sans-serif;
+}
+
+#wrapper {
+  margin: 7rem auto 10rem auto;
+  height: 100%;
+  width: 800px;
+  position: relative;
+}
+
+#carousel {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+#carousel::-webkit-scrollbar {
+  height: 0;
+}
+
+#prev,
+#next {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+#prev {
+  top: 60%;
+  left: 0;
+  transform: translate(50%, -50%);
+  display: none;
+  margin-left: -7rem;
+}
+
+#next {
+  top: 60%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  margin-right: -7rem;
+}
+
+#content {
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.item {
+  max-height: 220px;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 6%);
+  transition: 20s ease-in-out left;
+  transition: 20s ease-in-out right;
+}
+
+@media only screen and (max-width: 450px) {
+
+  #wrapper {
+    margin: 4rem auto 12rem auto;
+    width: 330px;
+  }
+
+    #recs {
+    width: max-content;
+    margin: auto;
+  }
+
+    .item {
+    max-height: 220px;
+  }
+  .corner {
+    width: 80%;
+    margin: 3rem auto 0 auto;
+  }
+
+  .corner h4 {
+    margin-bottom: 2rem;
+  }
+
+  .corner-tag {
+    height: 150px;
+  }
+
+}

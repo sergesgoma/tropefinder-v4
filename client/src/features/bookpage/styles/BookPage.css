@@ -1,0 +1,64 @@
+/* book page */
+
+.one-book {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem auto 1rem auto;
+  width: 800px;
+  align-items: center;
+  gap: 5rem;
+}
+
+.one-book .author-name {
+  width: max-content;
+}
+
+.description {
+  width: 100%;
+  font-size: 17px;
+  line-height: 2.5rem;
+  max-height: 180px;
+  padding-right: 1rem;
+  overflow: auto;
+  font-family: 'Crimson Pro', sans-serif;
+}
+
+.book-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 350px;
+}
+
+.book-img {
+  height: 320px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 40%);
+  grid-area: img;
+  margin: auto;
+}
+
+.tags {
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.tags a {
+  text-decoration: none;
+  color: var(--blue);
+  font-family: 'Crimson Pro', sans-serif;
+  font-size: 16px;
+}
+
+.desc-tag {
+  max-height: 103px;
+}
+
+@media only screen and (max-width: 450px) {
+   .desc-tag {
+    width: 100%;
+    font-size: 15px;
+    max-height: 98px;
+  }
+}

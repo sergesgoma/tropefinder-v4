@@ -1,0 +1,26 @@
+.book-details-section {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  max-height: 400px;
+  padding: 5rem 1rem;
+}
+@media only screen and (max-width: 450px) {
+  .book-details-section {
+    width: 350px;
+    min-height: 900px;
+    flex-direction: column;
+    background-color: white;
+    gap: 5rem;
+  }
+  .book-details {
+    background-color: transparent;
+  }
+  .container {
+    width:80%;
+  }
+   .tabs {
+    width: 80%;
+    height:50px;
+  }
+}

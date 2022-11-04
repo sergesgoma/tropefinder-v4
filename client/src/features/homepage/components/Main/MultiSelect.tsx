@@ -1,9 +1,9 @@
 import React from 'react';
 import Select from 'react-select';
 import useTropes from '../../../../hooks/useTropes';
-import './MultiSelect.css';
+import '../../styles/MultiSelect.css';
 
-export const MultiSelect = () => {
+const MultiSelect = () => {
   
   const allTropes = useTropes();
 
@@ -23,3 +23,5 @@ export const MultiSelect = () => {
     </div>
   );
 };
+
+export default MultiSelect;

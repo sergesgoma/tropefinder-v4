@@ -1,9 +1,9 @@
 import React from 'react';
-import { Main } from './components/Main';
-import { How } from './components/How';
-import { RandomTropes } from './components/RandomTropes';
+import Main from './components/Main';
+import How from './components/How';
+import RandomTropes from './components/RandomTropes';
 
-export const Home = () => {
+const Home = () => {
   return (
     <div>
       <Main />
@@ -12,3 +12,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

@@ -1,11 +1,11 @@
 import React from 'react';
-import './RandomTropes.css';
 import useBooks from '../../../../hooks/useBooks';
 import useTropes from '../../../../hooks/useTropes';
 import useRandomDiv from '../../hooks/useRandomDiv';
 import removeDuplicates from '../../../../utils/removeDuplicates';
+import '../../styles/RandomTropes.css';
 
-export const RandomTropes = () => {
+const RandomTropes = () => {
   const randomDiv = useRandomDiv();
   const data = useBooks();
   const trope = useTropes();
@@ -54,3 +54,5 @@ export const RandomTropes = () => {
     </section>
   );
 };
+
+export default RandomTropes;
