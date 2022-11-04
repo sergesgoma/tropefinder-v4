@@ -1,22 +1,15 @@
 import React from 'react';
 import Slider from 'react-slick';
-import IBookPageProps from '../../../../types/IBookPageProps';
-import useBooks from '../../../../hooks/useBooks';
+import IBook from '../../../../types/IBook';
+import IBookRecs from '../../../../types/IBookRecs';
+import useRecs from '../../hooks/useRecs';
 import settings from '../../services/settings';
-import'../../styles/BookPageRecs';
+import '../../styles/BookPageRecs';
 
-const BookPageRecs = ({ book, title }: IBookPageProps) => {
-  const tags = book[0].tag;
-  const genres = book[0].genres;
+const BookPageRecs = ({ book_id, title }: IBookRecs) => {
+  const recs = useRecs({ book_id, title });
+  const allRecs: IBook[] = recs.sort(() => 0.5 - Math.random()).slice(0, 20);
 
-  const data = useBooks();
-
-  const recs = data.filter(
-    (data) => data.genres.includes(genres[0]) && data.tag.includes(tags[0]) && data.title !== title
-  );
-  const allRecs = recs.sort(() => 0.5 - Math.random()).slice(0, 20);
-
- 
   return (
     <section className="recs">
       <div id="wrapper">

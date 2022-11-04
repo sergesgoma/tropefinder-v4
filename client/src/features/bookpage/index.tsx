@@ -8,7 +8,9 @@ import './styles/BookPage.css';
 
 const Book = () => {
   const params = useParams();
-  const { title } = params;
+  const { book_id, title } = params;
+  const bookid = Number(book_id);
+
   const data = useBooks();
 
   const filteredBook = data.filter((oneBook) => oneBook.title === title);
@@ -18,7 +20,7 @@ const Book = () => {
     <div>
       <BookPageHeader book={book} title={title} />
       <BookPageMain book={book} title={title} />
-      <BookPageRecs book={book} title={title} />
+      <BookPageRecs book_id={bookid} title={title} />
     </div>
   );
 };
