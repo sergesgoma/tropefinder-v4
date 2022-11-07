@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import useBooks from '../../../../hooks/useBooks';
+import useAuthor from '../../hooks/useAuthor';
 import Pagination from '../../../../layouts/Pagination';
 import usePagination from '../../hooks/usePagination';
 import '../../styles/TagPage.css';
@@ -8,13 +8,11 @@ import '../../styles/TagPage.css';
 const AuthorPage = () => {
   const params = useParams();
   const { author } = params;
-  const oneAuthor = author as string;
 
-  const data = useBooks();
-  const filteredBook = data.filter((book) => book.author.includes(oneAuthor));
+  const data = useAuthor();
 
   const pagination = usePagination();
-  const book = Object.values(filteredBook).slice(
+  const book = Object.values(data).slice(
     pagination.firstPostIndex,
     pagination.lastPostIndex
   );
@@ -62,7 +60,7 @@ const AuthorPage = () => {
         </a> */}
       </section>
       <Pagination
-        totalPosts={filteredBook.length}
+        totalPosts={data.length}
         postsPerPage={pagination.postsPerPage}
         setCurrentPage={pagination.setCurrentPage}
         currentPage={pagination.currentPage}

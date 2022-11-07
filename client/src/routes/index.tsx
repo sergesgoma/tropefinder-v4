@@ -28,6 +28,7 @@ const Routers = () => {
         <Route path="/author/:author" element={<Author />} />
         <Route path="/genre/:genre" element={<Genre />} />
         <Route path="/series/:series" element={<Series />} />
+        <Route path="/books" />
       </Routes>
     </BrowserRouter>
   );

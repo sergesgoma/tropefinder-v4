@@ -7,10 +7,10 @@ import '../../styles/TagPage.css';
 const SearchPage = () => {
   const queryString = require('query-string');
   const parsed = queryString.parse(window.location.search);
-  const query = [parsed.q];
+  const query = [parsed.search];
 
   const data = useBooks();
-  const allBooks: any = data.filter((oneBook) => oneBook.tag.includes(query[0]));
+  const allBooks = data.filter((oneBook) => oneBook.tag.includes(query[0]));
 
   const pagination = usePagination();
   const book = allBooks.slice(pagination.firstPostIndex, pagination.lastPostIndex);

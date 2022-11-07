@@ -1,11 +1,10 @@
 import React from 'react';
 import Select from 'react-select';
-import useTropes from '../../../../hooks/useTropes';
+import options from "../../../../data/options.json"
 import '../../styles/MultiSelect.css';
 
 const MultiSelect = () => {
-  
-  const allTropes = useTropes();
+  const allTropes = options;
 
   return (
     <div className="search-bar">
@@ -15,7 +14,7 @@ const MultiSelect = () => {
         className="search"
         id="search"
         placeholder="historical, plain jane, friends to lovers"
-        name="q"
+        name="search"
       />
       <button type="submit" className="button-search">
         <i className="fa-solid fa-magnifying-glass"></i>

@@ -1,5 +1,5 @@
 import React from 'react';
-import useBooks from '../../../../hooks/useBooks';
+import useHome from '../../hooks/useHome';
 import useTropes from '../../../../hooks/useTropes';
 import useRandomDiv from '../../hooks/useRandomDiv';
 import removeDuplicates from '../../../../utils/removeDuplicates';
@@ -7,7 +7,7 @@ import '../../styles/RandomTropes.css';
 
 const RandomTropes = () => {
   const randomDiv = useRandomDiv();
-  const data = useBooks();
+  const data = useHome();
   const tropes = useTropes();
 
   return (

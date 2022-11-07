@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import IBook from '../types/IBook';
+import IBook from '../../../types/IBook';
 
-function useBooks() {
+function useHome() {
   const [data, setData] = useState<IBook[]>([]);
 
   useEffect(() => {
     async function fetchData() {
-      const result = await axios.get<{ books: IBook[] }>(`/books`);
+      const result = await axios.get<{ books: IBook[] }>('/home');
       setData(result.data.books);
     }
     fetchData();
@@ -16,4 +16,4 @@ function useBooks() {
   return data;
 }
 
-export default useBooks;
+export default useHome;
