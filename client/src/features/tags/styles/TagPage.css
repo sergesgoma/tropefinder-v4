@@ -1,0 +1,275 @@
+.book-background {
+  width: 100%;
+  padding-top: 20rem;
+}
+
+.book-separator {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 750px;
+  gap: 10rem;
+  margin: 0 auto;
+}
+
+/* .section-title {
+  width: max-content;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  height: max-content;
+  margin: auto;
+  align-items: center;
+  grid-template-areas:
+    "title"
+    "author"
+    "button";
+} */
+
+
+.search-img {
+  background: url("../../../assets/img/book_lover.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 45%;
+  height: 300px;
+  background-position-y: center;
+}
+
+.search-tag-img {
+  background: url("../../../assets/img/bookshelves.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 45%;
+  height: 300px;
+  background-position-y: center;
+}
+
+.search-trope-img {
+  /* background: url("/img/universe.svg") no-repeat; */
+  background-size: 100%;
+  width: 45%;
+  height: 300px;
+  background-position-y: center;
+}
+
+.search-title {
+  font-size: 40px;
+  line-height: 1.4;
+  font-family: "Lora", serif;
+  font-weight: 300;
+  width: 90%;
+  grid-area: author;
+}
+
+.search-desc {
+  grid-area: button;
+  margin-top: -1rem;
+  width: 350px;
+  font-size: 15px;
+  line-height: 3rem;
+}
+
+.search-details {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: max-content;
+  margin: 0 auto;
+  margin-top: 10rem;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  margin-bottom: -12rem;
+  background-color: white;
+}
+
+.search-details-book {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.search-book {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+}
+
+.search-book .book-title {
+  margin-top: 2rem;
+}
+
+.search-book a {
+  transition: 0.4s ease-in-out;
+}
+
+.author-name {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--blue);
+  transition: 0.3s all ease-in-out;
+}
+
+.author-name:hover {
+  border-bottom: 1px solid #30bcd5;
+}
+
+.author-name a {
+  color: #222;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+}
+
+.author-name-block {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.latest-img {
+  height: 220px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 25%);
+  grid-area: img;
+}
+
+.thumbnail {
+  transition: all ease-in-out 0.3s;
+  z-index: 3;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail-slow {
+  transition: all ease-in-out 0.5s;
+  z-index: 3;
+}
+
+.thumbnail-slow:hover {
+  transform: scale(1.1);
+}
+
+
+[data-tooltip] {
+  position: relative;
+  z-index: 10;
+}
+
+/* Positioning and visibility settings of the tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  bottom: 110%;
+  left: 40%;
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+  will-change: transform;
+}
+
+/* The actual tooltip with a dynamic width */
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  padding: 10px 18px;
+  width: 180px;
+  height: 114px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-height: 2rem;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  color: #222;
+  text-align: center;
+  white-space: pre-wrap;
+  transform: translate(-50%, -5px) scale(0.5);
+}
+
+/* Tooltip becomes visible at hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+/* Scales from 0.5 to 1 -> grow effect */
+[data-tooltip]:hover:before {
+  transition-delay: 1s;
+  transition: all 0.3s ease-out;
+  transform: translate(-50%, -5px) scale(1);
+}
+
+@media only screen and (max-width: 450px) {
+  .latest-img {
+    height: 180px;
+  }
+  /* .section-title {
+    margin: auto 0;
+    text-align: center;
+    gap: 2rem;
+  } */
+
+    .book-separator {
+    gap: 4rem;
+    width: 350px;
+  }
+
+  .search-title {
+    font-size: 27px;
+    text-align: center;
+  }
+
+  .search-img {
+    width: 50%;
+    height: 200px;
+  }
+
+  
+  .search-details {
+    width: 370px;
+    margin-bottom: -6px;
+  }
+
+  .search-details-book {
+    width: 100%;
+  }
+
+  .search-book {
+    width: 125px;
+    margin-top: 5rem;
+  }
+
+  
+  .search-tag-img {
+    width: 80%;
+    height: 200px;
+  }
+
+  .latest-img {
+    height: 180px;
+  }
+
+  [data-tooltip]:hover {
+    display: none;
+  }
+
+  .book-title {
+    width: 130px;
+  }
+  
+  .author-name a {
+    font-size: 13px;
+  }
+}
+
+

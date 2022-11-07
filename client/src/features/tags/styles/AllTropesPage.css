@@ -1,0 +1,62 @@
+/* all tropes */
+
+.search-trope-img {
+  background: url("../../../assets/img/universe.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 45%;
+  height: 300px;
+  background-position-y: center;
+}
+
+
+.trope {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  background-color: #ddd;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  transition: all ease-in-out 0.8s;
+}
+
+.trope:nth-child(2n) {
+  background-color: #ddd;
+}
+
+.trope:nth-child(2n + 1) {
+  background-color: var(--purple);
+}
+
+.trope:nth-child(3n + 4) {
+  background-color: var(--blue);
+}
+
+.trope:nth-child(2n) a {
+  text-decoration: none;
+  color: #222;
+  transition: all ease-in-out 0.8s;
+}
+
+.trope:nth-child(2n + 1) a {
+  text-decoration: none;
+  color: white;
+  transition: all ease-in-out 0.8s;
+}
+
+.trope:nth-child(3n + 4) a {
+  text-decoration: none;
+  color: white;
+  transition: all ease-in-out 0.8s;
+}
+
+.trope:hover {
+  background-color: rgba(250, 250, 250, 0.7);
+}
+
+.trope:nth-child(1n) a:hover {
+  color: var(--blue);
+}

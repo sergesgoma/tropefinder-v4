@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,151 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+/* reset */
+
+:root {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  --light-blue: #e8edfc;
+  --blue: #438dff;
+  --purple: #6c63ff;
+  --default-black: #2f2e41;
+  font-family: "Lora", serif;
+  color: var(--default-black);
+}
+
+/* general */
+
+body {
+  background-image: url('../src/assets/img/background-texture.jpg');
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Dosis", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #222;
+}
+
+.big-title {
+  font-size: 70px;
+  width: 500px;
+  grid-area: title;
+}
+
+.medium-title {
+  font-size: 50px;
+}
+
+.medium-font {
+  font-size: 60px;
+}
+
+.center {
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+.p-16 {
+  font-size: 16px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.wrapper {
+  width: 800px;
+  margin: auto;
+}
+
+.br-30 {
+  border-radius: 30px;
+}
+
+.bb-2 {
+  border-bottom: 2px solid var(--blue);
+  width: max-content;
+  padding-bottom: 2rem;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.back {
+  font-size: 16px;
+  color: #222;
+  text-decoration: none;
+  transition: 0.9s ease-in-out all;
+}
+.back:hover {
+  text-decoration: underline;
+}
+
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f7f7f7;
+  border-radius: 30px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e8e8e8;
+  transition: all 0.8s ease-in-out;
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #dedede;
+}
+
+/* colors */
+
+.light-blue-bg {
+  background-color: var(--light-blue);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.logo-red {
+  filter: hue-rotate(130deg);
+}
+
+.logo-green {
+  filter: hue-rotate(230deg);
 }

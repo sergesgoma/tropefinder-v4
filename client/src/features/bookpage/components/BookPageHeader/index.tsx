@@ -1,7 +1,7 @@
 import React from 'react';
 import DropdownButton from './DropdownButton';
 import IBookPageProps from '../../../../types/IBookPageProps';
-import '../../BookPageHeader.css';
+import '../../styles/BookPageHeader.css';
 
 const BookPageHeader = ({ book, title }: IBookPageProps) => {
   return (

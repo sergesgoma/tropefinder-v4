@@ -3,7 +3,7 @@ import { NavBar } from './NavBar';
 import logo from '../../assets/img/search.png';
 import './Header.css';
 
-export const Header = () => {
+const Header = () => {
   const [header, setHeader] = useState(false);
   const setActiveHeader = () => {
     if (window.scrollY > 50) {
@@ -35,3 +35,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;

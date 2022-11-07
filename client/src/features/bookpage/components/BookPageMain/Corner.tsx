@@ -2,7 +2,7 @@ import React from 'react';
 import useTropes from '../../../../hooks/useTropes';
 import removeDuplicates from '../../../../utils/removeDuplicates';
 import IBookPageProps from '../../../../types/IBookPageProps';
-import './Corner.css';
+import '../../styles/Corner.css';
 
 const Corner = ({ book, title }: IBookPageProps) => {  
   const filteredTropes = useTropes();

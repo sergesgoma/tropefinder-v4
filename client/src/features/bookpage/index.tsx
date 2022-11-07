@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import BookPageHeader from './components/BookPageHeader';
 import BookPageMain from './components/BookPageMain';
 import BookPageRecs from './components/BookPageRecs';
-import useBooks from '../../hooks/useBooks';
+import useBookPage from './hooks/useBookPage';
 import './styles/BookPage.css';
 
 const Book = () => {
@@ -11,7 +11,7 @@ const Book = () => {
   const { book_id, title } = params;
   const bookid = Number(book_id);
 
-  const data = useBooks();
+  const data = useBookPage();
 
   const filteredBook = data.filter((oneBook) => oneBook.title === title);
   const book = Object.values(filteredBook);

@@ -14,7 +14,7 @@ export const tagController = {
     });
     const sessionAuth = req.session.isAuth;
 
-    const books = await prisma.Book.findMany({
+    const books = await prisma.book.findMany({
       where: {
         tag: {
           hasEvery: results,
@@ -33,7 +33,7 @@ export const tagController = {
   },
   searchEngine: async (req: Request, res: Response) => {
     // filtered tropes put in a variable
-    const tropes = await prisma.Tropes.findMany({ select: { trope: true } });
+    const tropes = await prisma.tropes.findMany({ select: { trope: true } });
     const data = tropes.map(function (trope: any) {
       return trope["trope"];
     });
@@ -43,7 +43,7 @@ export const tagController = {
     const { tag } = req.params;
     const sessionAuth = req.session.isAuth;
     try {
-      const books = await prisma.Book.findMany({
+      const books = await prisma.book.findMany({
         where: {
           tag: {
             has: tag.toLowerCase(),
@@ -67,7 +67,7 @@ export const tagController = {
     const { author } = req.params;
     const sessionAuth = req.session.isAuth;
     try {
-      const books = await prisma.Book.findMany({
+      const books = await prisma.book.findMany({
         where: {
           author: {
             contains: author,
@@ -92,7 +92,7 @@ export const tagController = {
     const { series } = req.params;
     const sessionAuth = req.session.isAuth;
     try {
-      const books = await prisma.Book.findMany({
+      const books = await prisma.book.findMany({
         where: {
           seriesName: {
             contains: series,
@@ -112,7 +112,7 @@ export const tagController = {
     const { genre } = req.params;
     const sessionAuth = req.session.isAuth;
     try {
-      const books = await prisma.Book.findMany({
+      const books = await prisma.book.findMany({
         where: {
           genres: {
             has: genre,
@@ -127,13 +127,12 @@ export const tagController = {
   tropeList: async (req: Request, res: Response) => {
     try {
       const sessionAuth = req.session.isAuth;
-      const tropes = await prisma.Tropes.findMany({
+      const tropes = await prisma.tropes.findMany({
         select: { trope: true },
         orderBy: {
           trope: "asc",
         },
       });
-
       res.json({ sessionAuth, tropes });
     } catch (err) {
       console.log(err);

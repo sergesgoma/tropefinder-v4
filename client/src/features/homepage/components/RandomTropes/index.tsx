@@ -8,7 +8,7 @@ import '../../styles/RandomTropes.css';
 const RandomTropes = () => {
   const randomDiv = useRandomDiv();
   const data = useBooks();
-  const trope = useTropes();
+  const tropes = useTropes();
 
   return (
     <section id="random" className={randomDiv ? 'latest show' : 'latest hide'}>
@@ -16,7 +16,7 @@ const RandomTropes = () => {
         <h2 className="medium-title">Random Tropes</h2>
         {data.map((value, index: number) => {
           const uniqueTag = removeDuplicates(value.tag);
-          const filteredTag = uniqueTag.filter((item) => trope.includes(item));
+          const filteredTag = uniqueTag.filter((item) => tropes.includes(item));
           const arrRandom: number = Math.floor(Math.random() * filteredTag.length);
           return (
             <>

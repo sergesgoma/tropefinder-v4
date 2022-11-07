@@ -1,0 +1,27 @@
+.pagination {
+  text-align: center;
+  margin: 30px 30px 60px;
+  user-select: none;
+  padding-top: 20rem;
+}
+
+.button-page {
+  display: inline-block;
+  margin: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 /10%);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 45px;
+  background: #ccc;
+  width: 45px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.current-page {
+  background: var(--blue);
+  border-radius: 45px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}

@@ -10,7 +10,7 @@ export const NavBar = () => {
       <a href="#how" className="nav-elem">
         How it works
       </a>
-      <a href="all-tropes" className="nav-elem">
+      <a href="/all-tropes" className="nav-elem">
         All Tropes
       </a>
 

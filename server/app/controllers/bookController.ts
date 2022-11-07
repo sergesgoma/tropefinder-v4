@@ -8,7 +8,7 @@ export const bookController = {
     const sessionAuth = req.session.isAuth;
     const booksCount = await prisma.book.count();
     const skip = Math.floor(Math.random() * booksCount);
-
+    
     const books = await prisma.book.findMany({
       skip: skip,
       take: 4,

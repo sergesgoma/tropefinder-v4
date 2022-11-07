@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import IBookRecs from '../../../types/IBookRecs';
+import IBook from '../../../types/IBook';
 
 function useRecs({ book_id, title }: IBookRecs) {
   const [recs, setRecs] = useState([]);
@@ -13,7 +14,15 @@ function useRecs({ book_id, title }: IBookRecs) {
     fetchData();
   }, [book_id, title]);
 
-  return recs;
+  let arr: IBook[] = [];
+
+  for (let i = 0; i < recs.length; i++) {
+    if (recs[i]['book_id'] !== book_id) {
+      arr.push(recs[i]);
+    }
+  }
+
+  return arr;
 }
 
 export default useRecs;
