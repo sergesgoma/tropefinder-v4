@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function useHowDiv() {
+function useShowHowDiv() {
   const [howDiv, setHowDiv] = useState(false);
 
   const showDiv = () => {
@@ -19,4 +19,4 @@ function useHowDiv() {
   return howDiv;
 }
 
-export default useHowDiv;
+export default useShowHowDiv;

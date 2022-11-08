@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import ITrope from '../types/ITrope';
 
-function useTropes() {
+function useFetchTropes() {
   const [trope, setTrope] = useState<ITrope[]>([]);
 
   useEffect(() => {
@@ -16,8 +16,8 @@ function useTropes() {
   const filteredTropes = trope.map(function (trope) {
     return trope['trope'];
   });
-  
+
   return filteredTropes;
 }
 
-export default useTropes;
+export default useFetchTropes;

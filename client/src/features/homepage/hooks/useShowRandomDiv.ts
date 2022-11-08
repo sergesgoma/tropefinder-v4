@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function useRandomDiv() {
+function useShowRandomDiv() {
   const [randomDiv, setRandomDiv] = useState(false);
 
   const showDiv = () => {
@@ -15,8 +15,8 @@ function useRandomDiv() {
     showDiv();
     window.addEventListener('scroll', showDiv);
   }, []);
-  
+
   return randomDiv;
 }
 
-export default useRandomDiv;
+export default useShowRandomDiv;

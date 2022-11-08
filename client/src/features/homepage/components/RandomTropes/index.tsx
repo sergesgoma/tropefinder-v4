@@ -1,14 +1,14 @@
 import React from 'react';
-import useHome from '../../hooks/useHome';
-import useTropes from '../../../../hooks/useTropes';
-import useRandomDiv from '../../hooks/useRandomDiv';
+import useFetchRandomBooks from '../../hooks/useFetchRandomBooks';
+import useFetchTropes from '../../../../hooks/useFetchTropes';
+import useShowRandomDiv from '../../hooks/useShowRandomDiv';
 import removeDuplicates from '../../../../utils/removeDuplicates';
 import '../../styles/RandomTropes.css';
 
 const RandomTropes = () => {
-  const randomDiv = useRandomDiv();
-  const data = useHome();
-  const tropes = useTropes();
+  const randomDiv = useShowRandomDiv();
+  const data = useFetchRandomBooks();
+  const tropes = useFetchTropes();
 
   return (
     <section id="random" className={randomDiv ? 'latest show' : 'latest hide'}>

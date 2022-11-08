@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import useGenre from '../../hooks/useGenre';
+import useFetchGenre from '../../hooks/useFetchGenre';
 import Pagination from '../../../../layouts/Pagination';
 import usePagination from '../../hooks/usePagination';
 import '../../styles/TagPage.css';
@@ -9,13 +9,10 @@ const GenrePage = () => {
   const params = useParams();
   const { genre } = params;
 
-  const data = useGenre();
-  
+  const data = useFetchGenre();
+
   const pagination = usePagination();
-  const book = Object.values(data).slice(
-    pagination.firstPostIndex,
-    pagination.lastPostIndex
-  );
+  const book = Object.values(data).slice(pagination.firstPostIndex, pagination.lastPostIndex);
 
   return (
     <div>

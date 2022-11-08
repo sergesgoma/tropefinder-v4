@@ -3,20 +3,20 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import IBook from '../../../types/IBook';
 
-function useSeries() {
+function useFetchGenre() {
   const [data, setData] = useState<IBook[]>([]);
   const params = useParams();
-  const { series } = params;
+  const { genre } = params;
 
   useEffect(() => {
     async function fetchData() {
-      const result = await axios.get<{ books: IBook[] }>(`/series/${series}`);
+      const result = await axios.get<{ books: IBook[] }>(`/genre/${genre}`);
       setData(result.data.books);
     }
     fetchData();
-  }, [series]);
+  }, [genre]);
 
   return data;
 }
 
-export default useSeries;
+export default useFetchGenre;

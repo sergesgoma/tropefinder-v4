@@ -1,11 +1,11 @@
 import React from 'react';
-import useTropes from '../../../../hooks/useTropes';
+import useFetchTropes from '../../../../hooks/useFetchTropes';
 import Pagination from '../../../../layouts/Pagination';
 import usePagination from '../../hooks/usePagination';
 import '../../styles/AllTropesPage.css';
 
 const AllTropesPage = () => {
-  const tropes = useTropes();
+  const tropes = useFetchTropes();
   const pagination = usePagination();
   const trope = Object.values(tropes).slice(pagination.firstPostIndex, pagination.lastPostIndex);
 

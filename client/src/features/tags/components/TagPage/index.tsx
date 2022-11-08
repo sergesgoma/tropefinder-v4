@@ -1,21 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import useTag from "../../hooks/useTag";
+import useFetchTag from '../../hooks/useFetchTag';
 import Pagination from '../../../../layouts/Pagination';
 import usePagination from '../../hooks/usePagination';
-import "../../styles/TagPage.css";
+import '../../styles/TagPage.css';
 
 const TagPage = () => {
   const params = useParams();
   const { tag } = params;
 
-  const data = useTag();
-  
+  const data = useFetchTag();
+
   const pagination = usePagination();
-  const book = Object.values(data).slice(
-    pagination.firstPostIndex,
-    pagination.lastPostIndex
-  );
+  const book = Object.values(data).slice(pagination.firstPostIndex, pagination.lastPostIndex);
 
   return (
     <div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import useAuthor from '../../hooks/useAuthor';
+import useFetchAuthor from '../../hooks/useFetchAuthor';
 import Pagination from '../../../../layouts/Pagination';
 import usePagination from '../../hooks/usePagination';
 import '../../styles/TagPage.css';
@@ -9,13 +9,10 @@ const AuthorPage = () => {
   const params = useParams();
   const { author } = params;
 
-  const data = useAuthor();
+  const data = useFetchAuthor();
 
   const pagination = usePagination();
-  const book = Object.values(data).slice(
-    pagination.firstPostIndex,
-    pagination.lastPostIndex
-  );
+  const book = Object.values(data).slice(pagination.firstPostIndex, pagination.lastPostIndex);
 
   return (
     <div>

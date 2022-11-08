@@ -3,10 +3,10 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import IBook from '../../../types/IBook';
 
-function useTag() {
+function useFetchTag() {
   const [data, setData] = useState<IBook[]>([]);
   const params = useParams();
-  const {tag} = params;
+  const { tag } = params;
 
   useEffect(() => {
     async function fetchData() {
@@ -19,4 +19,4 @@ function useTag() {
   return data;
 }
 
-export default useTag;
+export default useFetchTag;

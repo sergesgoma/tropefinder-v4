@@ -1,26 +1,25 @@
 import React from 'react';
-import useBooks from '../../../../hooks/useBooks';
+import useFetchSearch from '../../hooks/useFetchSearch';
 import Pagination from '../../../../layouts/Pagination';
 import usePagination from '../../hooks/usePagination';
+import queryString from 'query-string';
 import '../../styles/TagPage.css';
 
+const parsed = queryString.parse(window.location.search);
+const query: any[] = [parsed.search];
+
 const SearchPage = () => {
-  const queryString = require('query-string');
-  const parsed = queryString.parse(window.location.search);
-  const query = [parsed.search];
-
-  const data = useBooks();
-  const allBooks = data.filter((oneBook) => oneBook.tag.includes(query[0]));
-
+  const books = useFetchSearch();
   const pagination = usePagination();
-  const book = allBooks.slice(pagination.firstPostIndex, pagination.lastPostIndex);
+  const book = books.slice(pagination.firstPostIndex, pagination.lastPostIndex);
+  const newQuery = typeof query[0] === 'string' ? query[0] : query[0].join(', ');
 
   return (
     <div>
       <section className="book-background">
         <div className="book-separator">
           <section className="section-title">
-            <h3 className="search-title"> {query} </h3>
+            <h3 className="search-title"> {`${newQuery}`} </h3>
           </section>
           <section className="search-img"></section>
         </div>
@@ -28,7 +27,7 @@ const SearchPage = () => {
 
       <section className="search-details">
         <div className="search-details-book">
-          {book.map((value: any, index: number) => {
+          {book.map((value, index: number) => {
             return (
               <div className="search-book" key={index}>
                 <a data-tooltip={value.summary} href={'/book/' + value.book_id + '/' + value.title}>
@@ -54,7 +53,7 @@ const SearchPage = () => {
         </div>
       </section>
       <Pagination
-        totalPosts={allBooks.length}
+        totalPosts={books.length}
         postsPerPage={pagination.postsPerPage}
         setCurrentPage={pagination.setCurrentPage}
         currentPage={pagination.currentPage}
@@ -64,3 +63,4 @@ const SearchPage = () => {
 };
 
 export default SearchPage;
+export { query };

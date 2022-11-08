@@ -61,7 +61,8 @@ router.get("/wishlist/:book_id", isAuth, bookController.addWishlistPage);
 router.post("/wishlist/:book_id", isAuth, bookController.addWishlist);
 router.get("/wishlist/:book_id/delete", bookController.deleteWishlist);
 
-// TROPE LIST
+// TROPE & BOOK LIST
 router.get("/all-tropes", tagController.tropeList);
+router.get("/books", bookController.bookList);
 
 export { router };

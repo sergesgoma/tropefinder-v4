@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import useSeries from '../../hooks/useSeries';
+import useFetchSeries from '../../hooks/useFetchSeries';
 import Pagination from '../../../../layouts/Pagination';
 import usePagination from '../../hooks/usePagination';
 import '../../styles/TagPage.css';
@@ -9,13 +9,10 @@ const SeriesPage = () => {
   const params = useParams();
   const { series } = params;
 
-  const data = useSeries();
+  const data = useFetchSeries();
 
   const pagination = usePagination();
-  const book = Object.values(data).slice(
-    pagination.firstPostIndex,
-    pagination.lastPostIndex
-  );
+  const book = Object.values(data).slice(pagination.firstPostIndex, pagination.lastPostIndex);
 
   return (
     <div>

@@ -1,11 +1,11 @@
 import React from 'react';
-import useTropes from '../../../../hooks/useTropes';
+import useFetchTropes from '../../../../hooks/useFetchTropes';
 import removeDuplicates from '../../../../utils/removeDuplicates';
 import IBookPageProps from '../../../../types/IBookPageProps';
 import '../../styles/Corner.css';
 
-const Corner = ({ book, title }: IBookPageProps) => {  
-  const filteredTropes = useTropes();
+const Corner = ({ book, title }: IBookPageProps) => {
+  const filteredTropes = useFetchTropes();
 
   return (
     <div className="corner">

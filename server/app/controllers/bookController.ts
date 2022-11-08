@@ -8,7 +8,7 @@ export const bookController = {
     const sessionAuth = req.session.isAuth;
     const booksCount = await prisma.book.count();
     const skip = Math.floor(Math.random() * booksCount);
-    
+
     const books = await prisma.book.findMany({
       skip: skip,
       take: 4,
@@ -159,6 +159,20 @@ export const bookController = {
       res.redirect("/wishlist");
     } catch (err) {
       console.log(err);
+    }
+  },
+  bookList: async (req: Request, res: Response) => {
+    try {
+      const sessionAuth = req.session.isAuth;
+      const books = await prisma.book.findMany({
+        orderBy: {
+          book_id: "asc",
+        },
+      });
+      res.json({ sessionAuth, books });
+    } catch (err) {
+      console.log(err);
+      res.render("error");
     }
   },
 };

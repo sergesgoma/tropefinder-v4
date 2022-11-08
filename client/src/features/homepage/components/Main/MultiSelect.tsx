@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import options from "../../../../data/options.json"
+import options from '../../../../data/options.json';
 import '../../styles/MultiSelect.css';
 
 const MultiSelect = () => {
@@ -11,6 +11,7 @@ const MultiSelect = () => {
       <Select
         options={allTropes}
         isClearable={true}
+        isMulti={true}
         className="search"
         id="search"
         placeholder="historical, plain jane, friends to lovers"

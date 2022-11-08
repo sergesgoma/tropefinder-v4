@@ -1,9 +1,9 @@
 import React from 'react';
-import useHowDiv from '../../hooks/useHowDiv';
+import useShowHowDiv from '../../hooks/useShowHowDiv';
 import '../../styles/How.css';
 
 const How = () => {
-  const howDiv = useHowDiv();
+  const howDiv = useShowHowDiv();
 
   return (
     <section id="how" className={howDiv ? 'how show' : 'how hide'}>
