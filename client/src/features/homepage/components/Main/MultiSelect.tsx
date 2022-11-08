@@ -15,7 +15,7 @@ const MultiSelect = () => {
         className="search"
         id="search"
         placeholder="historical, plain jane, friends to lovers"
-        name="search"
+        name="q"
       />
       <button type="submit" className="button-search">
         <i className="fa-solid fa-magnifying-glass"></i>

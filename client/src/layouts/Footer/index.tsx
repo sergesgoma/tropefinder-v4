@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='footer'>
       <p>&copy; TropeFinder - 2022</p>
     </footer>
   );

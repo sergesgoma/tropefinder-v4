@@ -3,12 +3,11 @@
 .latest {
   background-color: #fff;
   width: 900px;
-  margin: auto;
+  margin: 0 auto;
   padding: 4rem 0 10rem 0;
-  /* background: url("/img/undraw_terms_re_6ak4.svg") no-repeat right; */
-  /* height: 584px; */
   border-radius: 7px;
   transition: all 500ms;
+  position: relative;
 }
 
 .latest h2 {
@@ -228,12 +227,12 @@
   .latest-img {
     height: 180px;
   }
-    .random-book {
+  .random-book {
     display: flex;
     width: 300px;
     margin: auto;
   }
-    .desc {
+  .desc {
     width: 175px;
     padding-right: 2.5rem;
   }

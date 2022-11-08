@@ -16,7 +16,6 @@ export const bookController = {
         id: "desc",
       },
     });
-
     res.json({ books });
   },
   bookPage: async (req: Request, res: Response) => {

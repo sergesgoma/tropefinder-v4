@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import '../../styles/SignupPage.css';
 
 const LoginPage = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  axios.defaults.withCredentials = true;
+
+  const login = () => {
+    axios
+      .post('/login', {
+        username: username,
+        password: password
+      })
+      .then((response) => {
+        if (!response.data.message) {
+        } else {
+          console.log(response.data);
+        }
+      });
+  };
   return (
     <section className="signup login">
       <form action="/login" method="post">
@@ -22,19 +41,25 @@ const LoginPage = () => {
               <label htmlFor="username" className="label-username">
                 Username
               </label>
-              <input type="username" name="username" id="username" placeholder="Start typing..." />
-            </div>
-            <div className="div-email">
-              <label htmlFor="email" className="label-email">
-                Email
-              </label>
-              <input type="email" name="email" id="email" placeholder="Start typing..." />
+              <input
+                type="username"
+                name="username"
+                id="username"
+                placeholder="Start typing..."
+                onChange={(e) => setUsername(e.target.value)}
+              />
             </div>
             <div className="div-password">
               <label htmlFor="password">Password</label>
-              <input type="password" name="password" id="password" placeholder="Start typing..." />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Start typing..."
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
-            <button type="submit" className="signup-button">
+            <button type="submit" className="signup-button" onClick={login}>
               Log in
             </button>
           </div>

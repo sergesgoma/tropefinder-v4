@@ -6,7 +6,7 @@ import queryString from 'query-string';
 import '../../styles/TagPage.css';
 
 const parsed = queryString.parse(window.location.search);
-const query: any[] = [parsed.search];
+const query: any[] = [parsed.q];
 
 const SearchPage = () => {
   const books = useFetchSearch();

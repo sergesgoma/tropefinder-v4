@@ -1,275 +1,231 @@
-.book-background {
-  width: 100%;
-  padding-top: 20rem;
-}
+/* signup & login */
 
-.book-separator {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  max-width: 750px;
-  gap: 10rem;
-  margin: 0 auto;
-}
-
-/* .section-title {
-  width: max-content;
-  display: grid;
-  grid-template-rows: 1fr auto 1fr;
-  height: max-content;
+.signup {
   margin: auto;
-  align-items: center;
-  grid-template-areas:
-    "title"
-    "author"
-    "button";
-} */
-
-
-.search-img {
-  background: url("../../../assets/img/book_lover.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 45%;
-  height: 300px;
-  background-position-y: center;
+  margin-top: 15rem;
+  background: url('../../../assets/img/terms.svg') no-repeat right;
+  background-size: 20%;
+  background-position-y: bottom;
+  margin-bottom: 35rem;
+  max-width: 1900px;
+  position: relative;
 }
 
-.search-tag-img {
-  background: url("../../../assets/img/bookshelves.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 45%;
-  height: 300px;
-  background-position-y: center;
-}
-
-.search-trope-img {
-  /* background: url("/img/universe.svg") no-repeat; */
-  background-size: 100%;
-  width: 45%;
-  height: 300px;
-  background-position-y: center;
-}
-
-.search-title {
-  font-size: 40px;
-  line-height: 1.4;
-  font-family: "Lora", serif;
-  font-weight: 300;
-  width: 90%;
-  grid-area: author;
-}
-
-.search-desc {
-  grid-area: button;
-  margin-top: -1rem;
-  width: 350px;
-  font-size: 15px;
-  line-height: 3rem;
-}
-
-.search-details {
-  border-radius: 20px 20px 0 0;
-  width: 100%;
-  height: max-content;
-  margin: 0 auto;
-  margin-top: 10rem;
-  padding-top: 5rem;
-  padding-bottom: 10rem;
-  margin-bottom: -12rem;
-  background-color: white;
-}
-
-.search-details-book {
+.signup .wrapper {
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  width: 1200px;
-  margin: 0 auto;
   gap: 2rem;
 }
 
-.search-book {
+.signup h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.signup p {
+  font-size: 16px;
+  color: #747474;
+  margin-bottom: 3rem;
+}
+
+.signup p a {
+  color: var(--blue);
+  font-family: 'Crimson Pro', sans-serif;
+}
+
+.signup-left {
+  width: 60%;
+  background-color: white;
+  border-radius: 6px;
+  padding: 4rem;
+}
+
+.signup-left a,
+.div-forgot-password a {
+  font-size: 16px;
+  color: #222;
+}
+
+.arrow-left {
+  margin: 0 0.5rem;
+}
+
+.signup-right {
+  width: 40%;
+}
+
+.signup-button {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: 'crimson pro', serif;
+  font-weight: 300;
+  margin: 1.5rem 0;
+}
+
+.div-email,
+.div-password,
+.div-username {
   display: flex;
   flex-direction: column;
-  width: 220px;
-  margin-top: 7rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
-.search-book .book-title {
-  margin-top: 2rem;
+.signup label {
+  font-size: 18px;
 }
 
-.search-book a {
-  transition: 0.4s ease-in-out;
+.signup .label-username {
+  margin-top: 1rem;
 }
 
-.author-name {
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--blue);
-  transition: 0.3s all ease-in-out;
+.signup input,
+.div-forgot-password input {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Lora', serif;
 }
 
-.author-name:hover {
-  border-bottom: 1px solid #30bcd5;
+.login {
+  margin: auto;
+  margin-top: 15rem;
+  background: url('../../../assets/img/login.svg') no-repeat right;
+  max-width: 1900px;
+  margin-right: 5rem;
+  margin-bottom: 35rem;
+  background-size: 20%;
+  background-position-y: bottom;
 }
 
-.author-name a {
-  color: #222;
-  font-size: 16px;
-  font-family: "Rubik", sans-serif;
-  text-decoration: none;
-}
-
-.author-name-block {
-    display: flex;
-    gap: 0.5rem;
-    align-items: baseline;
-}
-
-.latest-img {
-  height: 220px;
-  border-radius: 6px;
-  box-shadow: 0 10px 30px rgb(0 0 0 / 25%);
-  grid-area: img;
-}
-
-.thumbnail {
-  transition: all ease-in-out 0.3s;
-  z-index: 3;
-}
-
-.thumbnail:hover {
-  transform: scale(1.1);
-}
-
-.thumbnail-slow {
-  transition: all ease-in-out 0.5s;
-  z-index: 3;
-}
-
-.thumbnail-slow:hover {
-  transform: scale(1.1);
-}
-
-
-[data-tooltip] {
+.password-forgot {
   position: relative;
-  z-index: 10;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
 }
 
-/* Positioning and visibility settings of the tooltip */
-[data-tooltip]:before,
-[data-tooltip]:after {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  bottom: 110%;
-  left: 40%;
-  pointer-events: none;
-  transition: all 0.3s ease-out;
-  will-change: transform;
-}
-
-/* The actual tooltip with a dynamic width */
-[data-tooltip]:before {
-  content: attr(data-tooltip);
-  padding: 10px 18px;
-  width: 180px;
-  height: 114px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
-  line-height: 2rem;
-  border-radius: 6px;
+.password-forgot a {
+  color: #747474;
   font-size: 14px;
-  background-color: white;
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
-  color: #222;
-  text-align: center;
-  white-space: pre-wrap;
-  transform: translate(-50%, -5px) scale(0.5);
 }
 
-/* Tooltip becomes visible at hover */
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after {
-  visibility: visible;
-  opacity: 1;
+/* .forgot {
+  font-family: "Crimson Pro", sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} */
+/* 
+.div-forgot-password {
+  margin: auto;
+  margin-top: 15rem;
+  background-color: white;
+  border-radius: 6px;
+  padding: 4rem;
+  width: 700px;
+} */
+
+.div-forgot-password h2 {
+  width: 55%;
+  font-size: 40px;
+  margin-top: 3rem;
 }
-/* Scales from 0.5 to 1 -> grow effect */
-[data-tooltip]:hover:before {
-  transition-delay: 1s;
-  transition: all 0.3s ease-out;
-  transform: translate(-50%, -5px) scale(1);
+
+.div-forgot-password label {
+  font-size: 16px;
+  margin-top: 3rem;
+}
+
+.div-forgot-password p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.password-submit {
+  width: 100%;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.password-submit .signup-button {
+  margin: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: max-content;
+  margin-top: 1rem;
+}
+
+.btn-signup {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+  font-size: 13px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-family: 'crimson pro', serif;
+  font-weight: 500;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-signup:hover {
+  background-color: #62bdfa;
+  padding: 0.6rem 1.2rem;
+}
+
+.btn-login {
+  background-color: #aaa;
+  margin-left: -1rem;
+}
+
+.btn-logout {
+  background-color: #aaa;
+  margin-left: 1rem;
+}
+
+.btn-login,
+.btn-logout:hover {
+  background-color: #ccc;
 }
 
 @media only screen and (max-width: 450px) {
-  .latest-img {
-    height: 180px;
-  }
-  /* .section-title {
-    margin: auto 0;
-    text-align: center;
-    gap: 2rem;
-  } */
+  /* login */
 
-    .book-separator {
-    gap: 4rem;
+  .login {
+    max-width: 400px;
+    margin: 18rem auto 5rem auto;
+    background: none;
+  }
+
+  .signup {
+    background: none;
+  }
+
+  .signup-left {
+    margin: auto;
     width: 350px;
   }
 
-  .search-title {
-    font-size: 27px;
-    text-align: center;
+  .signup .wrapper {
+    flex-direction: column;
   }
 
-  .search-img {
-    width: 50%;
-    height: 200px;
+  .signup label {
+    font-size: 15px;
   }
 
-  
-  .search-details {
-    width: 370px;
-    margin-bottom: -6px;
-  }
-
-  .search-details-book {
-    width: 100%;
-  }
-
-  .search-book {
-    width: 125px;
+  .signup p {
+    font-size: 15px;
+    margin-bottom: 4rem;
     margin-top: 5rem;
   }
-
-  
-  .search-tag-img {
-    width: 80%;
-    height: 200px;
-  }
-
-  .latest-img {
-    height: 180px;
-  }
-
-  [data-tooltip]:hover {
-    display: none;
-  }
-
-  .book-title {
-    width: 130px;
-  }
-  
-  .author-name a {
-    font-size: 13px;
-  }
 }
-
-

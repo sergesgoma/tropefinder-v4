@@ -22,7 +22,7 @@ code {
   --blue: #438dff;
   --purple: #6c63ff;
   --default-black: #2f2e41;
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   color: var(--default-black);
 }
 
@@ -31,15 +31,19 @@ code {
 body {
   background-image: url('../src/assets/img/background-texture.jpg');
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  min-height: 100%;
+  position: relative;
 }
 
 html {
   margin: 0;
+  height: 100%;
 }
 
 h1 {
-  font-family: "Dosis", sans-serif;
+  font-family: 'Dosis', sans-serif;
   font-size: 3rem;
   font-weight: 500;
 }
