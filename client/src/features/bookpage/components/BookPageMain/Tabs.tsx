@@ -5,14 +5,12 @@ import Synopsis from './Tabs/Synopsis';
 import IBookPageProps from '../../../../types/IBookPageProps';
 import '../../styles/Tabs.css';
 
-
-const Tabs = ({ book, title }: IBookPageProps) => {
+const Tabs = ({ book, title, bookid }: IBookPageProps) => {
   const [toggleState, setToggleState] = useState(1);
-
   const toggleTab = (index: number) => {
     setToggleState(index);
   };
-  return (
+  return(
     <div className="container">
       <div className="bloc-tabs">
         <button
@@ -33,9 +31,9 @@ const Tabs = ({ book, title }: IBookPageProps) => {
       </div>
 
       <div className="content-tabs">
-        <Synopsis book={book} title={title} toggleState={toggleState} />
+        <Synopsis book={book} toggleState={toggleState} />
         <Details book={book} title={title} toggleState={toggleState} />
-        <Reviews toggleState={toggleState} />
+        <Reviews book={book} bookid={bookid} title={title} toggleState={toggleState} />
       </div>
     </div>
   );

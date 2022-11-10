@@ -1,4 +1,6 @@
 import React from 'react';
+import useLoader from '../../../../hooks/useLoader';
+import Loader from '../../../../components/ui/Loader';
 import useFetchSearch from '../../hooks/useFetchSearch';
 import Pagination from '../../../../layouts/Pagination';
 import usePagination from '../../hooks/usePagination';
@@ -10,11 +12,28 @@ const query: any[] = [parsed.q];
 
 const SearchPage = () => {
   const books = useFetchSearch();
+  const loader = useLoader();
   const pagination = usePagination();
   const book = books.slice(pagination.firstPostIndex, pagination.lastPostIndex);
   const newQuery = typeof query[0] === 'string' ? query[0] : query[0].join(', ');
 
-  return (
+  return loader ? (
+    <div>
+      <section className="book-background">
+        <div className="book-separator">
+          <section className="section-title">
+            <h3 className="search-title"> {`${newQuery}`} </h3>
+          </section>
+          <section className="search-img"></section>
+        </div>
+      </section>
+      <section className="search-details">
+        <div className="search-details-book loader">
+          <Loader />
+        </div>
+      </section>
+    </div>
+  ) : (
     <div>
       <section className="book-background">
         <div className="book-separator">

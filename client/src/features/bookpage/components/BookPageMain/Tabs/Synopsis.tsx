@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../styles/Synopsis.css';
 import IBookPageProps from '../../../../../types/IBookPageProps';
 
-const Synopsis = ({ book, title, toggleState }: IBookPageProps) => {
+const Synopsis = ({ book, toggleState }: IBookPageProps) => {
   return (
     <div className={toggleState === 1 ? 'content  active-content' : 'content'}>
       <div className="summary">

@@ -2,15 +2,24 @@ import React from 'react';
 import useFetchRandomBooks from '../../hooks/useFetchRandomBooks';
 import useFetchTropes from '../../../../hooks/useFetchTropes';
 import useShowRandomDiv from '../../hooks/useShowRandomDiv';
+import useLoader from '../../../../hooks/useLoader';
 import removeDuplicates from '../../../../utils/removeDuplicates';
+import Loader from '../../../../components/ui/Loader';
 import '../../styles/RandomTropes.css';
 
 const RandomTropes = () => {
+  const loader = useLoader();
   const randomDiv = useShowRandomDiv();
   const data = useFetchRandomBooks();
   const tropes = useFetchTropes();
 
-  return (
+  return loader ? (
+    <section id="random" className={randomDiv ? 'latest show' : 'latest hide'}>
+      <div className="wrapper loader">
+        <Loader />
+      </div>
+    </section>
+  ) : (
     <section id="random" className={randomDiv ? 'latest show' : 'latest hide'}>
       <div className="wrapper">
         <h2 className="medium-title">Random Tropes</h2>

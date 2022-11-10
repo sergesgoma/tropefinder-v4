@@ -19,7 +19,7 @@ const Book = () => {
   return (
     <div>
       <BookPageHeader book={book} title={title} />
-      <BookPageMain book={book} title={title} />
+      <BookPageMain book={book} title={title} bookid={bookid} />
       <BookPageRecs book_id={bookid} title={title} />
     </div>
   );

@@ -1,7 +1,9 @@
 import React from 'react';
 import './NavBar.css';
+import useAuth from '../../hooks/useAuth';
 
 export const NavBar = () => {
+  const isAuth = useAuth();
   return (
     <nav>
       <a href="/" className="nav-elem">
@@ -13,20 +15,25 @@ export const NavBar = () => {
       <a href="/all-tropes" className="nav-elem">
         All Tropes
       </a>
-
-      <a href="/signup" className="btn-signup nav-elem">
+      <a
+        href="/signup"
+        className={isAuth ? 'btn-signup nav-elem hide-div' : 'btn-signup nav-elem show-div'}>
         Sign Up
       </a>
-      <a href="/login" className="btn-signup btn-login">
+      <a
+        href="/login"
+        className={isAuth ? 'btn-signup btn-login hide-div' : 'btn-signup btn-login show-div'}>
         Log in
       </a>
-
-      {/* <a href="/wishlist" className="nav-elem">
+      <a href="/wishlist" className={isAuth ? 'nav-elem show-div' : 'nav-elem hide-div'}>
         Wishlist
       </a>
       <form action="/logout" method="post">
-        <button className="btn-signup btn-logout">Log out</button>
-      </form> */}
+        <button
+          className={isAuth ? 'btn-signup btn-logout show-div' : 'btn-signup btn-logout hide-div'}>
+          Log out
+        </button>
+      </form>{' '}
     </nav>
   );
 };

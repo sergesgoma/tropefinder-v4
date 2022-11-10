@@ -162,3 +162,7 @@ p {
 .logo-green {
   filter: hue-rotate(230deg);
 }
+
+.loader {
+  text-align: center;
+}

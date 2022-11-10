@@ -1,11 +1,8 @@
 import React from 'react';
+import IBookPageProps from '../../../../../types/IBookPageProps';
 import '../../../styles/Reviews.css';
 
-interface IToggle {
-  toggleState: number;
-}
-
-const Reviews = ({ toggleState }: IToggle) => {
+const Reviews = ({ book, bookid, title, toggleState }: IBookPageProps) => {
   return (
     <div className={toggleState === 3 ? 'content  active-content' : 'content'}>
       <div className="review-wrapper">
@@ -13,7 +10,7 @@ const Reviews = ({ toggleState }: IToggle) => {
         <div className="review-list bt-grey">
           <div className="center my-3">
             <a
-              href={'/book/book.book_id/book.title/write-review'}
+              href={'/book/' + bookid + '/' + title + '/write-review'}
               className="reviews-btn write-review">
               Write a review
             </a>

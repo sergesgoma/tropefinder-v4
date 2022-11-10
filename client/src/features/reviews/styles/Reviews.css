@@ -1,0 +1,42 @@
+
+/* white a review */
+
+.write-review-div {
+  background: none;
+  width: max-content;
+}
+
+.write-review-div .container-books {
+  width: max-content;
+  padding: 7rem;
+}
+
+.write-review-div .wrapper {
+  flex-direction: column;
+  width: max-content;
+  gap: 1rem;
+}
+
+.div-review {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.write-review-div textarea {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  outline: 0;
+  width: 500px;
+  height: 150px;
+  overflow: auto;
+  resize: none;
+  border-radius: 7px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.label-review {
+  width: max-content;
+}
+

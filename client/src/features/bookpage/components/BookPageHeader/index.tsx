@@ -1,10 +1,19 @@
 import React from 'react';
 import DropdownButton from './DropdownButton';
 import IBookPageProps from '../../../../types/IBookPageProps';
+import useLoader from '../../../../hooks/useLoader';
+import Loader from '../../../../components/ui/Loader';
 import '../../styles/BookPageHeader.css';
 
 const BookPageHeader = ({ book, title }: IBookPageProps) => {
-  return (
+  const loader = useLoader();
+  return loader ? (
+    <section className="book-background">
+      <div className="book-separator book-separator-mobile">
+        <Loader />
+      </div>
+    </section>
+  ) : (
     <section className="book-background">
       {book.map((value, index: number) => {
         return (

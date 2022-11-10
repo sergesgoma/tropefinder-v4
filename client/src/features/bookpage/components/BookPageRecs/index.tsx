@@ -4,12 +4,21 @@ import IBook from '../../../../types/IBook';
 import IBookRecs from '../../../../types/IBookRecs';
 import useRecs from '../../hooks/useRecs';
 import settings from '../../services/settings';
+import useLoader from '../../../../hooks/useLoader';
+import Loader from '../../../../components/ui/Loader';
 import '../../styles/BookPageRecs.css';
 
 const BookPageRecs = ({ book_id, title }: IBookRecs) => {
   const recs = useRecs({ book_id, title });
   const allRecs: IBook[] = recs.sort(() => 0.5 - Math.random()).slice(0, 20);
-  return (
+  const loader = useLoader();
+  return loader ? (
+    <section className="recs">
+      <div id="wrapper">
+        <Loader />
+      </div>
+    </section>
+  ) : (
     <section className="recs">
       <div id="wrapper">
         <h3 className="recs-title center">In the same vein</h3>

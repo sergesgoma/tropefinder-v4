@@ -3,9 +3,12 @@ import { useParams } from 'react-router-dom';
 import useFetchTag from '../../hooks/useFetchTag';
 import Pagination from '../../../../layouts/Pagination';
 import usePagination from '../../hooks/usePagination';
+import useLoader from '../../../../hooks/useLoader';
+import Loader from '../../../../components/ui/Loader';
 import '../../styles/TagPage.css';
 
 const TagPage = () => {
+  const loader = useLoader();
   const params = useParams();
   const { tag } = params;
 
@@ -14,7 +17,23 @@ const TagPage = () => {
   const pagination = usePagination();
   const book = Object.values(data).slice(pagination.firstPostIndex, pagination.lastPostIndex);
 
-  return (
+  return loader ? (
+    <div>
+      <section className="book-background">
+        <div className="book-separator">
+          <section className="section-title">
+            <h3 className="search-title">{tag} </h3>
+          </section>
+          <section className="search-tag-img"></section>
+        </div>
+      </section>
+      <section className="search-details loader">
+        <div className="search-details-book">
+          <Loader />
+        </div>
+      </section>
+    </div>
+  ) : (
     <div>
       <section className="book-background">
         <div className="book-separator">

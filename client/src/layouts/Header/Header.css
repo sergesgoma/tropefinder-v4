@@ -39,3 +39,11 @@
   height: 50px;
   width: 50px;
 }
+
+.show-div {
+  display:block;
+}
+
+.hide-div {
+  display:none;
+}

@@ -10,6 +10,10 @@ import Series from '../pages/tagpages/Series';
 import Tag from '../pages/tagpages/Tag';
 import Signup from '../pages/authentification/Signup';
 import Login from '../pages/authentification/Login';
+import Wishlist from '../features/wishlist/components/Wishlist';
+import AddReview from '../features/reviews/components/AddReview';
+import EditReview from '../features/reviews/components/EditReview';
+import ProtectedRoutes from './PotectedRoutes';
 
 const Routers = () => {
   return (
@@ -28,6 +32,11 @@ const Routers = () => {
         <Route path="/author/:author" element={<Author />} />
         <Route path="/genre/:genre" element={<Genre />} />
         <Route path="/series/:series" element={<Series />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/book/:book_id/:title/write-review" element={<AddReview />} />
+          <Route path="/book/:book_id/:title/edit-review" element={<EditReview />} />
+        </Route>
         <Route path="/books" />
       </Routes>
     </BrowserRouter>
